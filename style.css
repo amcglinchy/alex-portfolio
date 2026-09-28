@@ -474,6 +474,21 @@ body#resume .menu-resume {
         background-color 0.25s ease,
         box-shadow 0.25s ease;
 }
+.d3-project {
+    flex-direction: column;
+    gap: 7px;
+}
+
+.project-title {
+    display: block;
+}
+
+.project-year {
+    display: block;
+    font-size: 11px;
+    opacity: 0.55;
+    letter-spacing: 1px;
+}
 
 
 /* --- Project descriptions --- */
@@ -1605,6 +1620,16 @@ body#resume .menu-resume {
 
         box-shadow:
             0 0 20px 10px rgba(41, 35, 43, 0.05);
+    }
+        /* Hide project hover descriptions on mobile */
+    .project-description,
+    .d3-project:hover .project-description {
+        display: none;
+    }
+
+    /* Keep resume section buttons from turning blue on mobile */
+    .section-toggle {
+        color: var(--ink);
     }
 
 }

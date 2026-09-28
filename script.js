@@ -27,8 +27,11 @@ if (workPage && typeof d3 !== "undefined" && typeof projects !== "undefined") {
         .attr("href", function(d) {
             return d.url;
         })
-        .text(function(d) {
-            return d.shortTitle;
+        .html(function(d) {
+            return `
+                <span class="project-title">${d.shortTitle}</span>
+                <span class="project-year">${d.year}</span>
+            `;
         })
         .style("--x", function(d, i) {
 
