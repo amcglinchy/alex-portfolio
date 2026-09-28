@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NYC 311 + Homelessness — Alex McGlinchy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-body" id="project">
+
+    <nav class="menu-nav">
+
+    <button class="menu-button" type="button">
+        Menu
+    </button>
+
+    <div class="menu-links">
+        <a href="index.html" class="menu-circle menu-home">Home</a>
+        <a href="work.html" class="menu-circle menu-work">Work</a>
+        <a href="about.html" class="menu-circle menu-about">About</a>
+        <a href="resume.html" class="menu-circle menu-resume">Resume</a>
+    </div>
+
+</nav>
+
+    <main class="project-page">
+
+        <header class="project-header">
+
+            <p class="project-kicker">
+                Data Analysis + Tableau
+            </p>
+
+            <h1>
+                What Happens When You Call 311 About a Homeless Individual?
+            </h1>
+
+            <p class="project-deck">
+                An exploration of how New York City's Department of Homeless
+                Services and NYPD responded to 311 complaints related to
+                homelessness.
+            </p>
+
+            <div class="project-meta">
+                <span>NYC OpenData</span>
+                <span>Tableau</span>
+                <span>311 Data</span>
+            </div>
+
+        </header>
+
+
+        <section class="project-text">
+
+            <p>
+                If you come across a person experiencing homelessness and want
+                to offer help, one option you have is to call 311 or make a
+                request online. These requests are sent to the Department of
+                Homeless Services or the NYPD, who then respond according to
+                the information provided.
+            </p>
+
+            <p>
+                But what happens once your request is submitted? What efforts
+                are made to assist the unhoused individual? Are the efforts by
+                DHS and the NYPD effective in getting the person help? Should
+                you even make that 311 call?
+            </p>
+
+            <p>
+                The following visualizations explore these questions by looking
+                at how each agency “resolves” homelessness-related 311 requests
+                and how long those resolutions take. The project uses NYC 311
+                complaint data categorized as Encampment, Homeless Encampment,
+                Homeless Street Condition, and Homeless Person Assistance.
+            </p>
+
+        </section>
+
+
+        <div class="circle-divider">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <section class="project-section">
+
+            <h2>
+                How Long Does It Take to Resolve a 311 Homeless Complaint?
+            </h2>
+
+            <p>
+                This line graph compares DHS and the NYPD by the time it took
+                each agency to “resolve” homelessness-related 311 complaints.
+                In the data analyzed for this project, the NYPD consistently
+                resolved complaints more quickly than DHS.
+            </p>
+
+            <p>
+                One possible explanation is that the agencies respond to
+                different types of complaints. The NYPD dealt with Homeless
+                Street Condition and Homeless Encampment complaints, while DHS
+                responded to Homeless Person Assistance requests, which directly
+                involve an individual and may take more time to resolve.
+            </p>
+
+            <p>
+                To calculate average resolution time, I measured the difference
+                between the Resolution Action Updated Date and the Created Date.
+                I excluded several extreme outliers — including one average of
+                89 days — so that smaller changes over time remained readable.
+            </p>
+
+            <div class="tableau-wrapper">
+                <iframe
+                    src="https://public.tableau.com/views/311Project_Homeless/Sheet15?:showVizHome=no"
+                    title="Average resolution time for NYC homelessness-related 311 complaints"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <p class="project-source">
+                Source: NYC OpenData
+            </p>
+
+        </section>
+
+
+        <div class="circle-divider">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <section class="project-section">
+
+            <h2>NYPD Response to Homeless Complaints</h2>
+
+            <p>
+                This bar graph shows NYPD responses to Homeless Street Condition
+                and Homeless Encampment 311 complaints. I grouped the resolution
+                descriptions according to whether the response appeared to
+                provide recourse.
+            </p>
+
+            <p>
+                The results showed that the NYPD frequently reported finding no
+                violation. That outcome appeared approximately twice as often as
+                reports that the agency “took action to fix the condition.”
+                The responses raised questions for me about what it means for
+                these complaints to be considered resolved and how transparent
+                that process is to the person who submitted the request.
+            </p>
+
+            <p>
+                I chose a bar graph to make the difference between the grouped
+                outcomes easy to compare. Similar Resolution Action Descriptions
+                were grouped together, while descriptions that did not contribute
+                meaningfully to the research question were excluded.
+            </p>
+
+            <div class="tableau-wrapper">
+                <iframe
+                    src="https://public.tableau.com/views/311Project_Homeless_NYPD/Sheet16?:showVizHome=no"
+                    title="NYPD responses to homelessness-related 311 complaints"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <p class="project-source">
+                Source: NYC OpenData
+            </p>
+
+        </section>
+
+
+        <div class="circle-divider">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <section class="project-section">
+
+            <h2>
+                DHS Resolutions to Homeless Person Assistance 311 Requests
+            </h2>
+
+            <p>
+                In the data analyzed for this project, DHS most frequently
+                reported that it could not find the individual. When an
+                individual was found, the data frequently recorded that
+                assistance was declined.
+            </p>
+
+            <p>
+                Of the 62,537 Homeless Person Assistance requests included in
+                my analysis, only five were recorded as resulting in an
+                individual accepting assistance. The dataset cannot tell us why
+                DHS could not locate many individuals, why assistance was
+                declined, or what happened to an individual after the reported
+                resolution.
+            </p>
+
+            <p>
+                I used a packed bubble chart to emphasize the relative size of
+                the different outcomes. Similar Resolution Action Descriptions
+                were grouped together to reduce the number of categories and
+                make the comparison easier to read.
+            </p>
+
+            <p>
+                For example, cases in which DHS determined the issue was outside
+                its jurisdiction, referred the request elsewhere, or reported
+                insufficient information were grouped into a category I called
+                “No response from DHS.”
+            </p>
+
+            <div class="tableau-wrapper">
+                <iframe
+                    src="https://public.tableau.com/views/311Project_Homeless_DHS2/Sheet8?:showVizHome=no"
+                    title="DHS resolutions to Homeless Person Assistance 311 requests"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <p class="project-source">
+                Source: NYC OpenData
+            </p>
+
+        </section>
+
+
+        <div class="circle-divider">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <section class="project-section">
+
+            <h2>Next Steps</h2>
+
+            <p>
+                One next step would be to compare average resolution time with
+                the way a complaint was submitted — mobile, online, or phone —
+                to see whether one method is associated with faster resolution.
+            </p>
+
+            <p>
+                Another direction would be geographic. Looking at the locations
+                of homelessness-related 311 complaints could show whether some
+                neighborhoods generate more complaints, which agency responds,
+                and whether average resolution time differs across boroughs.
+            </p>
+
+            <p>
+                A more complex next step would be to examine what data the NYPD
+                and DHS collect during these interactions and how that
+                information is subsequently used.
+            </p>
+
+        </section>
+
+
+        <section class="project-conclusion">
+
+            <p class="project-kicker">Conclusion</p>
+
+            <h2>So, what happens after someone makes the call?</h2>
+
+            <p>
+                This project began with a fairly simple question about what
+                happens after a person submits a homelessness-related request
+                to 311. The data showed substantial differences between how DHS
+                and the NYPD handled those requests and raised further questions
+                about what a “resolved” complaint actually means.
+            </p>
+
+            <p>
+                My analysis also suggested that relatively few of these requests
+                resulted in the kind of direct assistance a caller might assume
+                they are initiating. Based on those findings, I questioned
+                whether reporting an unhoused individual through 311 was
+                necessarily an effective way to offer that person help.
+            </p>
+
+        </section>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
